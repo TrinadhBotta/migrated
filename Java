@@ -1,0 +1,12 @@
+import java.util.List;
+import services.input_loader.InputLoader;
+import services.prompt_builder.PromptBuilder;
+
+public class PromptGenerator {
+    public String generatePrompt() {
+        List<String> inputs = InputLoader.loadInputs();
+        System.out.println("Loaded inputs: " + inputs);  // Debugging line to check loaded inputs
+        String prompt = PromptBuilder.buildPrompt(inputs);
+        return prompt;
+    }
+}
