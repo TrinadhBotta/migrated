@@ -16,12 +16,8 @@ class CalculatorService {
     }
 
     divide(a, b) {
-        try {
-            if (b === 0) throw new Error('Cannot divide by zero');
-            return a / b;
-        } catch (error) {
-            console.error(error.message);
-        }
+        if (b === 0) throw new Error('Cannot divide by zero');
+        return a / b;
     }
 
     power(base, exponent) {
